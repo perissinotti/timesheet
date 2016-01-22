@@ -17,10 +17,38 @@ if [[ "$key" = "q" ]]; then
     break
 fi
 done
-echo -e "\n\nJob Description:"
+echo -e "\n\nClient(enter c) or Training/other(enter t)"
 read text
-echo
-echo "$strt, $text, $dif, $hs:$ms:$ss"
-echo "$strt, $text, $dif, $hs:$ms:$ss" >> timesheet.csv
-echo
-echo "Saved timesheet.csv"
+if [[ "$text" = "t" ]]; then
+    echo -e "\n\nJob Description:"
+    read text
+    echo
+    echo "$strt, $dif, $hs:$ms:$ss, $text"
+    echo "$strt, $dif, $hs:$ms:$ss, $text" >> timesheet.csv
+    echo
+    echo "Saved timesheet.csv"
+else
+    echo -e "\n\nJob Description:"
+    read text1
+    echo -e "\n\nDepartment:"
+    read text2
+    echo -e "\n\nClient Name:"
+    read text3
+    echo -e "\n\nClient Role:"
+    read text4
+    echo -e "\n\nSolution/approach:"
+    read text5
+    echo -e "\n\nComplaints:"
+    read text6
+    echo
+    echo "$strt, $dif, $hs:$ms:$ss, $text1, $text2, $text3, $text4, $text5, $text6"
+    echo "$strt, $dif, $hs:$ms:$ss, $text1, $text2, $text3, $text4, $text5, $text6" >> timesheet.csv
+    echo
+    echo "Saved timesheet.csv"
+fi
+
+
+
+
+
+
