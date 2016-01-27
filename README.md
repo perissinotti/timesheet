@@ -18,7 +18,7 @@ or download the script manually
 $chmod +x timesheet.sh
 $./timesheet.sh
 ```
-* Once you finish with your task press "q"  
+* Once you finish with your task press "q", if you need to pause press "p".  
 * Enter letter c for work done with "clients" or letter t for "training/other". -> input the required prompts and press enter, it will then generate a csv file (timesheet.csv) and it will add a line each time you execute it.
  
 #importCSV_googleAppsScript 
